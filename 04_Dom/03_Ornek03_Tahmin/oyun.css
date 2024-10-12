@@ -1,0 +1,121 @@
+/* Yazı sitili ; google font a gir display içinde start 2p, select yap*/
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* TODO **********************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* box-sizing: border-box; Eğer bunu kullanırsanız, padding değeri kutunun genişliğine 
+     ilave olarak eklenmez ve kutunun genişliği sabit kalır. */
+}
+
+/* TODO **********************************************************************************************/
+header {
+  position: relative;
+  /* Elementler normal konumunda bulunuyor fakat eğer biz istersek 
+     o elementi bulunduğu konuma göre farklı bir pozisyona götürebiliyoruz.*/
+  height: 300px;
+  border-bottom: 7px solid #eee;
+}
+/* TODO **********************************************************************************************/
+h1 {
+  /* header parent ona position relative, child ı olan h1 e de absolute vererek 
+     parent ına göre yerleştirmiş oluyoruz, yani ortala dersek parentın içinde ortala*/
+  position: absolute;
+  /* position: absolute; Bu olmazsa sol üst köşeye yapışır. Elemente direk pozisyon verebiliyoruz. 
+     Relative'de olduğu gibi eski bulunduğu konuma göre HAREKET ETMİYOR.. 
+     Direk bizden aldığı pozisyon değerlerine göre hareket ediyor. 
+     Poziyonu belirlerken bir üstteki RELATİVE elemente göre konum alıyor. 
+     Eğer bu elementin PARENT(bir üstteki element) elementi RELATİVE değilse, 
+     o zaman BODY'ye göre hareket eder.*/
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Yazılan şey 0 px li olsaydı buna gerek yoktu, h1 e ayrılan alanda 
+     yüzde elli yazı girsin ve bu alanda yazı tam ortada bulunsun*/
+}
+/* TODO **********************************************************************************************/
+body {
+  font-family: "Press Start 2P";
+  color: white;
+  background-color: #2d3436;
+}
+/* TODO **********************************************************************************************/
+.aralik {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+/* TODO **********************************************************************************************/
+.btn {
+  margin-top: 15px;
+  margin-left: 15px;
+  border: none;
+  font-family: inherit; /* Buton da ki yazılar da aynı olsun diye bu şekilde yapıyoruz..*/
+  font-size: 30px;
+  padding: 20px 25px;
+  cursor: pointer;
+  background-color: #eee;
+  text-align: center;
+}
+/* TODO **********************************************************************************************/
+.question {
+  position: absolute;
+  left: 50%;
+  width: 180px;
+  bottom: 0;
+  padding: 25px;
+  background-color: #eee;
+  color: #333;
+  font-size: 60px;
+  text-align: center;
+  transform: translate(-50%, 50%);
+  /* Bu özellik x ekseninde ortalamayı sağladı*/
+}
+/* TODO **********************************************************************************************/
+main {
+  height: 600px;
+  color: #eee;
+  display: flex; /*alttakileri kullanabilmek için*/
+  justify-content: space-around;
+  /* yatay olarak */
+  align-items: center;
+  /*dikey ortalar*/
+}
+/* TODO **********************************************************************************************/
+.sağ {
+  width: 400px;
+  font-size: 20px;
+}
+/* TODO **********************************************************************************************/
+.sol {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  /* buradaki elemanlar sütun şeklinde olsunlar */
+  align-items: center;
+}
+/* TODO **********************************************************************************************/
+.tahmin {
+  background: none;
+  /* kendi rengi iptal ortama ayak uydursun */
+  border: 5px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 40px;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 50px;
+}
+/* TODO **********************************************************************************************/
+.mesaj {
+  margin-bottom: 150px;
+}
+/* TODO **********************************************************************************************/
+.puan {
+  margin-bottom: 20px;
+}

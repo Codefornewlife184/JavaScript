@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş</title>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <p id="result" class="test">JS html ye hükmeder...</p>
+    <input type="button" value="Bas Bakalım" onClick="islem();" />
+    <input type="button" value="Welcome" onClick="Welcome();" />
+    <input type="button" value="Good Bye" onClick="GoodBye();" />
+    <br />
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <script>
+      var veriTutucu = "Değişken tanımlama";
+      document.getElementById("result").innerHTML = veriTutucu;
+
+      var x, y, z;
+      x = 80;
+      y = 5;
+      z = x + y;
+      document.getElementById("result2").innerHTML = x * y * 5;
+      document.getElementById("result3").innerHTML = z;
+    </script>
+  </body>
+</html>

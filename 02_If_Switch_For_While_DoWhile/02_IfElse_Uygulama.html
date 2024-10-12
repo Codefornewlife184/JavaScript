@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Vize ve Final Ortalamasını Hesaplayan Bir uygulama</p>
+    <br /><br />
+    <input id="vize1" /><br /><br />
+    <input id="final1" /><br /><br />
+    <input id="ortalama1" /><br /><br />
+
+    <button onClick="hesapla();">Ortalama Hesaplama Programı</button>
+    <button onClick="harfnotu();">Harf Notu Hesaplama Programı</button>
+
+    <script>
+      var vize, final, ortalama;
+
+      function hesapla() {
+        vize = document.getElementById("vize1").value;
+        final = document.getElementById("final1").value;
+        ortalama = vize * 0.4 + final * 0.6;
+        document.getElementById("ortalama1").value = ortalama;
+      }
+
+      function harfnotu() {
+        if (ortalama < 100 && ortalama >= 90) {
+          document.write("AA ile geçtiniz...");
+        } else if (ortalama < 90 && ortalama >= 80) {
+          document.write("BB ile geçtiniz...");
+        } else if (ortalama < 80 && ortalama >= 70) {
+          document.write("CC ile geçtiniz...");
+        } else if (ortalama < 70 && ortalama >= 55) {
+          document.write("DD ile şartlı geçtiniz...");
+        } else document.write("FF ile Kaldınız...");
+      }
+    </script>
+  </body>
+</html>
